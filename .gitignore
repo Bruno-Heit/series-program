@@ -1,0 +1,8 @@
+
+# directorios
+bin/
+include/
+lib/
+
+# archivos
+pyvenv.cfg
