@@ -1,6 +1,6 @@
  Este proyecto es hecho con la intención de crear una aplicación de escritorio que permita hacer un 
 seguimiento de las series que el usuario ve, vió o tiene la intención de ver.
- NOTA: EL PROYECTO SE CENTRA EN SERIES E INCLUSO ANIMES, NO EN PELÍCULAS ;_; .
+ NOTA: EL PROYECTO SE CENTRA EN SERIES E INCLUSO ANIMES, NO EN PELÍCULAS :( .
  Para eso el usuario debe poder:
 
     • (CREATE) Agregar nuevas series (junto con sus datos)
@@ -11,13 +11,13 @@ seguimiento de las series que el usuario ve, vió o tiene la intención de ver.
  Implementación:
     El código está escrito principalmente en Python. De ser necesario, algunos módulos estarán escritos 
     en C -principalmente para una mayor velocidad de ejecución de las instrucciones-.
-    Adicionalmente, decidí usar bases de datos SQL con MySQL para guardar la información, aunque pude 
+    Adicionalmente, decidí usar bases de datos SQL con SQLite para guardar la información, aunque pude 
     también usar archivos .csv, .txt, archivos excel, binarios, etc.
 
 
  TODO:
     • HACER QUE EL USUARIO PUEDA HACER OPERACIONES 'CRUD' SOBRE LAS SERIES.
-    • LLEVAR HISTORIAL DE SERIES / ANIMES, LOS ÚLTIMOS VISTOS.
+    • LLEVAR HISTORIAL DE SERIES, LOS ÚLTIMOS VISTOS.
     • 
     • SEPARAR EPISODIOS EN TEMPORADAS.
     • 
