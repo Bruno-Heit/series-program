@@ -1,0 +1,35 @@
+Series:
+	serieID (pk) |     name       | seasonID (fk) | id_movies
+	_____________|________________|_______________|__________
+	1            | breaking bad   |     1         |    1
+	2            | sw: mandalorian|     2         |    ...
+
+
+Seasons:
+	seasonID (pk) |   serieID |  name      |  episodeID (fk)
+	______________|___________|____________|________________
+	1             |       1   | temp 1     | 1
+	2             |       1   | temp 2     | 2
+	3	      |       1   | temp 3     | 3
+	4             |       1   | temp 4     | 4
+	5             |       1   | temp 5     | 5
+	6             |       2   | temp 1     | 6
+
+	seasons_episodes
+	id (pk) | seasonID (fk) | serieID | episodeID(fk)
+	________|_______________|_________|______________
+	1	|       1       |    1    |    1
+	2	|       1	|    1    |    2
+	3       |       2       |    1    |    3
+
+
+Episodes:
+	episodeID (pk) | seasonID  | serieID | episode_number | status
+	_______________|___________|_________|________________|_______
+	1              |      1    |    1    | 1              | visto
+	2	       |      1    |    1    | 2              | visto
+	3              |      1    |    1    | 3              | visto
+	4	       |      2    |    1    | 1              | no visto
+	
+	
+

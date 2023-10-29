@@ -22,6 +22,10 @@
   <property name="styleSheet">
    <string notr="true">QFrame {
 	border: 1px solid black;
+}
+
+* {
+	font-family: &quot;Verdana&quot;, &quot;Sans-Serif&quot;;
 }</string>
   </property>
   <property name="tabShape">
@@ -37,7 +41,7 @@
 	min-width: 25px;
 }</string>
    </property>
-   <layout class="QGridLayout" name="gridLayout" rowstretch="1,18" columnstretch="1,18">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="1,18" columnstretch="1,7">
     <property name="leftMargin">
      <number>0</number>
     </property>
@@ -53,16 +57,6 @@
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="0" column="0" colspan="2">
-     <widget class="QFrame" name="header">
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="0">
      <widget class="QFrame" name="side_bar">
       <property name="frameShape">
@@ -71,33 +65,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pushButton">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>75</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Nueva serie</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>50</y>
-         <width>75</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Eliminar serie</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="btn_newSerie">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -107,7 +75,20 @@
         </rect>
        </property>
        <property name="text">
-        <string>Modificar serie</string>
+        <string>Nueva serie</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_deleteSerie">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>150</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Eliminar serie</string>
        </property>
       </widget>
      </widget>
@@ -120,153 +101,414 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QTableWidget" name="tableWidget">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>20</y>
-         <width>561</width>
-         <height>521</height>
-        </rect>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="16,1">
+       <property name="spacing">
+        <number>0</number>
        </property>
-       <property name="horizontalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOff</enum>
+       <property name="leftMargin">
+        <number>0</number>
        </property>
-       <property name="sizeAdjustPolicy">
-        <enum>QAbstractScrollArea::AdjustToContents</enum>
+       <property name="topMargin">
+        <number>0</number>
        </property>
-       <property name="editTriggers">
-        <set>QAbstractItemView::SelectedClicked</set>
+       <property name="rightMargin">
+        <number>0</number>
        </property>
-       <property name="selectionMode">
-        <enum>QAbstractItemView::SingleSelection</enum>
+       <property name="bottomMargin">
+        <number>0</number>
        </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nueva fila</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>Nueva columna</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Nueva columna</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Nueva columna</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Nueva columna</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Nueva columna</string>
-        </property>
-       </column>
-      </widget>
-      <widget class="QFrame" name="info_side_bar">
-       <property name="geometry">
-        <rect>
-         <x>619</x>
-         <y>10</y>
-         <width>131</width>
-         <height>531</height>
-        </rect>
+       <item>
+        <widget class="QListWidget" name="listWidget">
+         <property name="styleSheet">
+          <string notr="true">QListWidget {
+	font-size: 22px;
+}
+QListWidget::item {
+	padding: 10px 0;
+}
+QListWidget::item:hover {
+	background-color: #b8b8ff;
+}
+QListWidget::item:selected {
+	background-color: #9898ff;
+}</string>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+         </property>
+         <property name="tabKeyNavigation">
+          <bool>true</bool>
+         </property>
+         <property name="defaultDropAction">
+          <enum>Qt::IgnoreAction</enum>
+         </property>
+         <property name="resizeMode">
+          <enum>QListView::Adjust</enum>
+         </property>
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>nombre_serie1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>nombre_serie2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>nombre_serie3</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="info_side_bar">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#info_side_bar {
+	min-width: 28px;
+	max-width: 30px;
+}
+
+#btn_toggleInfo_side_bar {
+	max-width: 28px;
+	max-height: 28px;
+	border: none;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout" stretch="0,20">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="toggleFrame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="btn_toggleInfo_side_bar">
+               <property name="minimumSize">
+                <size>
+                 <width>28</width>
+                 <height>28</height>
+                </size>
+               </property>
+               <property name="text">
+                <string notr="true"/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>icons/menu.svg</normaloff>icons/menu.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>6</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="info_panel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#info_panel {
+	padding-right: 50px;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <property name="spacing">
+              <number>5</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QTreeWidget" name="treeWidget">
+               <column>
+                <property name="text">
+                 <string>nombre_serie1</string>
+                </property>
+               </column>
+               <item>
+                <property name="text">
+                 <string>géneros</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>temporadas</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>nombre_temp_1</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>ep1 + (duración: ...) + status</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>ep2 + (duración: ...) + status</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>ep3 + (duración: ...) + status</string>
+                  </property>
+                 </item>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>nombre_temp_2</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>ep1 + (duración: ...) + status</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>ep2 + (duración: ...) + status</string>
+                  </property>
+                 </item>
+                </item>
+               </item>
+               <item>
+                <property name="text">
+                 <string>películas</string>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>peli_1 + (duración) + status</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>peli_2 + (duración) + status</string>
+                 </property>
+                </item>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QFrame" name="header">
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,4,0,0">
+       <property name="spacing">
+        <number>5</number>
        </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
+       <property name="leftMargin">
+        <number>0</number>
        </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+       <property name="topMargin">
+        <number>0</number>
        </property>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>0</y>
-          <width>75</width>
-          <height>23</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </widget>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="labelSeries">
+         <property name="text">
+          <string>SERIES</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="seriesSearchBar">
+         <property name="styleSheet">
+          <string notr="true">#seriesSearchBar {
+	font-size: 16px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>250</number>
+         </property>
+         <property name="placeholderText">
+          <string notr="true">Buscar una serie...</string>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_searchSeries">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>28</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icons/search.svg</normaloff>icons/search.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_toggleTheme">
+         <property name="styleSheet">
+          <string notr="true">min-width: 80px;
+max-width: 80px;
+min-height: 26px;
+max-height: 26px;</string>
+         </property>
+         <property name="text">
+          <string>switch button</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>seriesSearchBar</sender>
+   <signal>editingFinished()</signal>
+   <receiver>btn_searchSeries</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>566</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>664</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS Genres(id INTEGER PRIMARY KEY,
+    genre TEXT);
+
+CREATE TABLE IF NOT EXISTS Series(id INTEGER PRIMARY KEY, 
+    serie_name TEXT, 
+    id_seasons INTEGER, 
+    FOREIGN KEY(id_seasons) REFERENCES);
